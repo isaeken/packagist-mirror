@@ -1,0 +1,40 @@
+{
+    "name": "isaeken/packagist-mirror",
+    "description": "Build mirror of packagist.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Isa Eken",
+            "email": "hello@isaeken.com.tr",
+            "homepage": "https://github.com/isaeken",
+            "role": "Founder"
+        }
+    ],
+    "require": {
+        "spindle/httpclient": "1.*",
+        "guiguiboy/php-cli-progress-bar": "dev-master",
+        "php": "^8.0",
+        "ext-json": "*",
+        "ext-hash": "*",
+        "ext-curl": "*",
+        "ext-PDO": "*",
+        "ext-zlib": "*",
+        "ext-pdo_sqlite": "*",
+        "guzzle/guzzle": "^3.9"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "IsaEken\\PackagistMirror\\": "src/"
+        }
+    },
+    "bin": [
+        "parallel.php"
+    ],
+    "scripts": {
+        "mirror": "php bin/mirror.php",
+        "compress": "tar cjf packagist.tar.bz2 cache/"
+    }
+}

@@ -1,0 +1,8 @@
+/.vscode
+/.idea
+/vendor
+/cache/*
+/logs
+/public_html/*
+packagist.tar.bz2
+optimize.db
